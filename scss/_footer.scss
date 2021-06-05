@@ -1,0 +1,10 @@
+footer {
+  .nav-pills .nav-link {
+    color: $font-color;
+  }
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    border-radius: 30px;
+    background: $primary;
+  }
+}

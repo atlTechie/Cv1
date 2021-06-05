@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+body {
+  font-family: $body-font;
+  font-size: $font-size;
+  color: $font-color;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+.sidebar {
+  background: $secondary;
+  color: $white;
+  display: none;
+}
+
+main {
+  background-image: url("./images/email-pattern.png");
+
+  background-position: center;
+  background-attachment: fixed;
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, auto);
+}
+
+.content-wrapper {
+  background: rgba(255, 255, 255, 0.5);
+  .header-image {
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 1em;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  header,
+  footer {
+    display: none;
+  }
+  .sidebar {
+    display: block;
+  }
+}

@@ -1,0 +1,42 @@
+.sidebar {
+  display: none;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: 1fr;
+  padding: 1em;
+
+  .logo {
+    grid-row: 2/3;
+  }
+  .side-nav {
+    grid-row: 3/4;
+    button {
+      text-align: left;
+    }
+    .nav-pills .nav-link {
+      border-radius: 0;
+      border-bottom: 1px solid $white-trans-20;
+      color: $white-trans-50;
+    }
+    .nav-pills .nav-link.active,
+    .nav-pills .show > .nav-link {
+      background: transparent;
+      border-radius: 0;
+      border-bottom: 1px solid $white;
+      color: $white;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    display: grid;
+    position: fixed;
+    width: 250px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    p {
+      font-size: 1.25rem !important;
+    }
+  }
+}
