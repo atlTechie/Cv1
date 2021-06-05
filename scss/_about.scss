@@ -1,5 +1,5 @@
 .about-content {
-  display: grid;
+  display: block;
   grid-gap: 20px;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, auto);
@@ -39,12 +39,45 @@
   }
 }
 
+// Portfolio Section
+.portfolio-item {
+  background: $primary;
+  padding: 3rem;
+  text-align: center;
+  color: $white;
+  margin-bottom: 1em;
+}
+
+// Media Query
+
+@media (min-width: 576px) {
+  .about-content {
+    display: grid;
+    .portfolio-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &.item-1 {
+        grid-column: 1/4;
+      }
+      &.item-2 {
+        grid-column: 4/7;
+      }
+    }
+  }
+}
 @media (min-width: 768px) {
   .about-content {
+    display: grid;
     .header-image {
       height: 350px;
     }
+    .portfolio-item {
+      margin-bottom: 0;
+    }
   }
+}
+@media (min-width: 1024px) {
 }
 
 @media (min-width: 1400px) {
@@ -52,5 +85,10 @@
     .header-image {
       height: 550px;
     }
+  }
+
+  .about-content .header-image span p,
+  .about-content .header-image span p.lead {
+    font-size: 1.5rem !important;
   }
 }
