@@ -1,4 +1,5 @@
-.about-content {
+.about-content,
+.portfolio-content {
   display: block;
   grid-gap: 20px;
   grid-template-columns: repeat(6, 1fr);
@@ -64,7 +65,8 @@
 // Media Query
 
 @media (min-width: 768px) {
-  .about-content {
+  .about-content,
+  .portfolio-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     .header-image {
@@ -108,7 +110,8 @@
 }
 
 @media (min-width: 1400px) {
-  .about-content {
+  .about-content,
+  .portfolio-content {
     .header-image {
       height: 550px;
     }
